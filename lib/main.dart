@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -92,22 +93,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            body: Column(
+              children: [
+                Row(
+                  child: Image.network(
+                      "https://picsum.photos/id/164/300/200", semanticLabel: "https://picsum.photos/id/174/300/200",
+                    height: 300,
+                    width: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
 
-            const Text(
-              'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            const Padding(
+              padding: EdgeInsets.only(left: 16,right: 16),
+              child: Text("Explore the charm of our city's hidden gems and embark on a journey to discover the rich cultural heritage, breathtaking landscapes, and unique experiences that await you. From historic landmarks to vibrant markets and serene natural wonders, our city  offers a tapestry of experiences that will captivate your senses. Join us in exploring the beauty of our city and create memories that will last a lifetime. Come and visit our city's treasurestoday.",
+                textAlign: TextAlign.justify,
+              ),
             ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+      Text(
+              'Blue body of water',
+            ),;
   }
 }
