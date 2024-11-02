@@ -53,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var citytour;
     return Scaffold(
       appBar: AppBar(
         title: Text('City Tour'),
@@ -81,9 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 100,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
-                          itemCount:
+                          itemCount: citytour.imageUrls.length,
                           itemBuilder: (context, index) {
-                            return Padding(padding: EdgeInserts.only),
+                            return Padding(padding: EdgeInsert.only(right: 8),
                           },),
                       ),
                     ],
